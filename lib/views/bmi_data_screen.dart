@@ -164,25 +164,23 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                     style: lableTextStyle,
                   ),
                   BmiCard(
-                    child: BmiCard(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                              height: MediaQuery.of(context).size.height * 0.15,
-                              child: CupertinoPicker(
-                                scrollController:
-                                    FixedExtentScrollController(initialItem: 5),
-                                itemExtent: 25,
-                                magnification: 2,
-                                useMagnifier: true,
-                                onSelectedItemChanged: (val) {
-                                  weight = val + 20;
-                                },
-                                children: genereteList(15, 90),
-                              )),
-                        ],
-                      ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                            height: MediaQuery.of(context).size.height * 0.15,
+                            child: CupertinoPicker(
+                              scrollController:
+                                  FixedExtentScrollController(initialItem: 5),
+                              itemExtent: 25,
+                              magnification: 2,
+                              useMagnifier: true,
+                              onSelectedItemChanged: (val) {
+                                weight = val + 20;
+                              },
+                              children: genereteList(15, 90),
+                            )),
+                      ],
                     ),
                   ),
                 ],
