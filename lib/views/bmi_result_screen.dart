@@ -71,8 +71,9 @@ class BmiResultScreen extends StatelessWidget {
     bmiCalculator.getHealRiskDescription();
 
     return Scaffold(
+      backgroundColor: const Color(0xff663399),
       appBar: AppBar(
-        title: const Text("Hasil Hitung BMI"),
+        title: Center(child: const Text("Hasil Hitung BMI")),
       ),
       body: Column(children: [
         const Expanded(
@@ -80,7 +81,7 @@ class BmiResultScreen extends StatelessWidget {
           child: Text(
             "Hasil Perhitungan",
             style: TextStyle(
-              fontSize: 40,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -127,12 +128,16 @@ class BmiResultScreen extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Container(
-            height: 80,
-            color: const Color(0xffec3c66),
+            height: 60,
+            margin: EdgeInsets.all(15),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: const Color(0xffFF00FF),
+            ),
             child: const Center(
                 child: Text("Hitung Ulang",
                     style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white))),
           ),

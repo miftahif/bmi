@@ -20,7 +20,6 @@ String? gender;
 //   double heightInMeter = height / 100;
 //   final h = (heightInMeter * heightInMeter);
 //   final bmi = weight / h;
-
 //   return bmi;
 // }
 
@@ -45,7 +44,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
     return Scaffold(
       backgroundColor: const Color(0xff663399),
       appBar: AppBar(
-        title: const Text("Bmi Calculator"),
+        title: Center(child: const Text("Bmi Calculator")),
       ),
       body: Column(children: [
         Row(
@@ -59,7 +58,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
               child: BmiCard(
                 borderColor: (gender == "male") ? Colors.white : primaryColor,
                 child: const GendericonText(
-                  icon: Icons.male,
+                  icon: Icons.boy,
                   title: 'Male',
                 ),
               ),
@@ -74,7 +73,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                   borderColor:
                       (gender == "female") ? Colors.white : primaryColor,
                   child: const GendericonText(
-                    icon: Icons.female,
+                    icon: Icons.girl,
                     title: 'female',
                   ),
                 ),
@@ -206,7 +205,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
             margin: EdgeInsets.all(15),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: const Color(0xffec3c66),
+              color: const Color(0xffFF00FF),
             ),
             child: const Center(
                 child: Text("Hitung BMI",

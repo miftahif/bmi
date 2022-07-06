@@ -50,18 +50,18 @@ class BmiCalculator {
       case underweightSevere:
       case underweightModerate:
       case underweightMild:
-        desc = "Possible nutritional deficiency and osteoporosis";
+        desc = "Kemungkinan kekurangan nutrisi dan osteoporosis";
         break;
       case normal:
-        desc = "Low risk";
+        desc = "Rendah Resiko";
         break;
       case overweight:
-        desc = "diabetes";
+        desc = "potensi kecil diabetes";
         break;
       case obeseI:
       case obeseII:
       case obeseIII:
-        desc = "diabetes";
+        desc = "potensi besar diabetes";
         break;
 
       default:
